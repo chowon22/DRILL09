@@ -45,6 +45,10 @@ while running:
     character.clip_draw(frame * FRAME_W, action * FRAME_H, FRAME_W, FRAME_H, x, y)
     update_canvas()
     handle_events()
+    if dir_x > 0:
+        action = 1
+    else:
+        action = 3
     x += dir_x * SPEED
     frame = (frame + 1) % FRAME_COUNT
     delay(DELAY)
