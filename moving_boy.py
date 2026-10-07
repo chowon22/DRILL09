@@ -48,14 +48,10 @@ while running:
     handle_events()
     if dir_x != 0:
         face = dir_x
-    if dir_x > 0:
-        action = 1
-    elif dir_x < 0:
-        action = 0
-    elif face == 1:
-        action = 3
+    if dir_x == 0:
+        action = 3 if face == 1 else 2
     else:
-        action = 2
+        action = 1 if face == 1 else 0
     x += dir_x * SPEED
     frame = (frame + 1) % FRAME_COUNT
     delay(DELAY)
