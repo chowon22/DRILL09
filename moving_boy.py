@@ -1,6 +1,8 @@
 from pico2d import *
 
 TUK_WIDTH, TUK_HEIGHT = 1280, 1024
+FRAME_W, FRAME_H = 100, 100
+FRAME_COUNT = 8
 
 open_canvas(TUK_WIDTH, TUK_HEIGHT)
 tuk_ground = load_image('TUK_GROUND.png')
