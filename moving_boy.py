@@ -24,11 +24,12 @@ def handle_events():
 running = True
 x = TUK_WIDTH // 2
 y = TUK_HEIGHT // 2
+frame = 0
 
 while running:
     clear_canvas()
     tuk_ground.draw(TUK_WIDTH // 2, TUK_HEIGHT // 2)
-    character.clip_draw(0, 300, 100, 100, x, y)
+    character.clip_draw(frame * FRAME_W, 300, FRAME_W, FRAME_H, x, y)
     update_canvas()
     handle_events()
     delay(0.05)
