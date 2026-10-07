@@ -38,6 +38,7 @@ y = TUK_HEIGHT // 2
 frame = 0
 action = 3
 dir_x = 0
+face = 1
 
 while running:
     clear_canvas()
@@ -45,6 +46,8 @@ while running:
     character.clip_draw(frame * FRAME_W, action * FRAME_H, FRAME_W, FRAME_H, x, y)
     update_canvas()
     handle_events()
+    if dir_x != 0:
+        face = dir_x
     if dir_x > 0:
         action = 1
     elif dir_x < 0:
