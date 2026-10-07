@@ -22,6 +22,8 @@ def handle_events():
 
 
 running = True
+x = TUK_WIDTH // 2
+y = TUK_HEIGHT // 2
 
 while running:
     clear_canvas()
