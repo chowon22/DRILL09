@@ -40,6 +40,17 @@ def handle_events():
                 dir_y += 1
 
 
+def update_action():
+    global face, action
+
+    if dir_x != 0:
+        face = dir_x
+    if dir_x == 0 and dir_y == 0:
+        action = 3 if face == 1 else 2
+    else:
+        action = 1 if face == 1 else 0
+
+
 running = True
 x = TUK_WIDTH // 2
 y = TUK_HEIGHT // 2
@@ -55,12 +66,7 @@ while running:
     character.clip_draw(frame * FRAME_W, action * FRAME_H, FRAME_W, FRAME_H, x, y)
     update_canvas()
     handle_events()
-    if dir_x != 0:
-        face = dir_x
-    if dir_x == 0 and dir_y == 0:
-        action = 3 if face == 1 else 2
-    else:
-        action = 1 if face == 1 else 0
+    update_action()
     x += dir_x * SPEED
     y += dir_y * SPEED
     frame = (frame + 1) % FRAME_COUNT
