@@ -57,7 +57,7 @@ while running:
     handle_events()
     if dir_x != 0:
         face = dir_x
-    if dir_x == 0:
+    if dir_x == 0 and dir_y == 0:
         action = 3 if face == 1 else 2
     else:
         action = 1 if face == 1 else 0
