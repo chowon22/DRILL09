@@ -51,6 +51,13 @@ def update_action():
         action = 1 if face == 1 else 0
 
 
+def move_boy():
+    global x, y
+
+    x += dir_x * SPEED
+    y += dir_y * SPEED
+
+
 running = True
 x = TUK_WIDTH // 2
 y = TUK_HEIGHT // 2
@@ -67,8 +74,7 @@ while running:
     update_canvas()
     handle_events()
     update_action()
-    x += dir_x * SPEED
-    y += dir_y * SPEED
+    move_boy()
     frame = (frame + 1) % FRAME_COUNT
     delay(DELAY)
 
