@@ -63,11 +63,11 @@ def move_boy():
 running = True
 x = TUK_WIDTH // 2
 y = TUK_HEIGHT // 2
-frame = 0
-action = 3
 dir_x = 0
 dir_y = 0
 face = 1
+frame = 0
+action = 3
 
 while running:
     clear_canvas()
