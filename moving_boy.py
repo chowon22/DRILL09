@@ -12,7 +12,7 @@ character = load_image('animation_sheet.png')
 
 
 def handle_events():
-    global running, dir_x
+    global running, dir_x, dir_y
 
     events = get_events()
     for event in events:
@@ -38,6 +38,7 @@ y = TUK_HEIGHT // 2
 frame = 0
 action = 3
 dir_x = 0
+dir_y = 0
 face = 1
 
 while running:
