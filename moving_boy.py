@@ -47,6 +47,8 @@ while running:
     handle_events()
     if dir_x > 0:
         action = 1
+    elif dir_x < 0:
+        action = 0
     else:
         action = 3
     x += dir_x * SPEED
