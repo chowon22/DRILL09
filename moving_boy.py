@@ -62,6 +62,7 @@ while running:
     else:
         action = 1 if face == 1 else 0
     x += dir_x * SPEED
+    y += dir_y * SPEED
     frame = (frame + 1) % FRAME_COUNT
     delay(DELAY)
 
