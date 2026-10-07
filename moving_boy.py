@@ -56,6 +56,8 @@ def move_boy():
 
     x += dir_x * SPEED
     y += dir_y * SPEED
+    x = clamp(FRAME_W // 2, x, TUK_WIDTH - FRAME_W // 2)
+    y = clamp(FRAME_H // 2, y, TUK_HEIGHT - FRAME_H // 2)
 
 
 running = True
