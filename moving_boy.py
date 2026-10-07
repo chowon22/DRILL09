@@ -52,8 +52,10 @@ while running:
         action = 1
     elif dir_x < 0:
         action = 0
-    else:
+    elif face == 1:
         action = 3
+    else:
+        action = 2
     x += dir_x * SPEED
     frame = (frame + 1) % FRAME_COUNT
     delay(DELAY)
