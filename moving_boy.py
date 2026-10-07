@@ -25,11 +25,12 @@ running = True
 x = TUK_WIDTH // 2
 y = TUK_HEIGHT // 2
 frame = 0
+action = 3
 
 while running:
     clear_canvas()
     tuk_ground.draw(TUK_WIDTH // 2, TUK_HEIGHT // 2)
-    character.clip_draw(frame * FRAME_W, 300, FRAME_W, FRAME_H, x, y)
+    character.clip_draw(frame * FRAME_W, action * FRAME_H, FRAME_W, FRAME_H, x, y)
     update_canvas()
     handle_events()
     frame = (frame + 1) % FRAME_COUNT
